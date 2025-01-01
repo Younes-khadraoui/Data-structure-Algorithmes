@@ -16,7 +16,7 @@ func main() {
 	}
 
 	i := stack
-	for i.next != nil {
+	for i != nil {
 		fmt.Print("|", i.value, "| -> ")
 		i = i.next
 	}
@@ -25,7 +25,7 @@ func main() {
 	stack, val := pop(stack)
 	fmt.Println("\npoped value", val)
 	i = stack
-	for i.next != nil {
+	for i != nil {
 		fmt.Print("|", i.value, "| -> ")
 		i = i.next
 	}
